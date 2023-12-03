@@ -2,6 +2,7 @@
 FROM golang:latest
 
 # 设置工作目录
+RUN mkdir -p /app
 WORKDIR /app
 
 # 将本地的代码复制到容器内的工作目录
@@ -13,4 +14,4 @@ RUN go build -o cmd/youdangzhe main.go
 EXPOSE 9001
 
 # 设置容器启动命令
-CMD ["cmd/youdangzhe", "server", "-c", "config/config.yaml"]
+CMD ["cmd/youdangzhe", "server", "-c", "cmd/config.yaml"]
