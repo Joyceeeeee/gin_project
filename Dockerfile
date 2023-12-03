@@ -14,4 +14,4 @@ RUN go build -o cmd/youdangzhe main.go
 EXPOSE 9001
 
 # 设置容器启动命令
-CMD ["cmd/youdangzhe", "server", "-c", "cmd/config.yaml"]
+CMD ["cmd/youdangzhe", "server"]

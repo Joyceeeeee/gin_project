@@ -3,14 +3,13 @@ package cmd
 import (
 	"fmt"
 	"github.com/spf13/cobra"
+	"os"
 	"youdangzhe/cmd/command"
 	"youdangzhe/cmd/cron"
 	"youdangzhe/cmd/server"
 	"youdangzhe/cmd/version"
-	"youdangzhe/config"
 	"youdangzhe/internal/global"
 	"youdangzhe/internal/pkg/logger"
-	"os"
 )
 
 var (
@@ -22,7 +21,7 @@ var (
 based on the project can be quickly completed business development, out of the box 📦`,
 		PersistentPreRun: func(cmd *cobra.Command, args []string) {
 			// 1、初始化配置
-			config.InitConfig(configPath)
+			//config.InitConfig(configPath)
 			// 2、初始化zap日志
 			logger.InitLogger()
 		},
