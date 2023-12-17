@@ -11,7 +11,7 @@ COPY . .
 # 构建 Go 项目
 RUN go build -o cmd/youdangzhe main.go
 
-EXPOSE 9001 25
+EXPOSE 9001
 
 # 设置容器启动命令
 CMD ["cmd/youdangzhe", "server"]
