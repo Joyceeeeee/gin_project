@@ -6,10 +6,11 @@ const (
 	AuthorizationError = 403
 	NotFound           = 404
 	NotLogin           = 401
-	InvalidParameter   = 10000
-	UserDoesNotExist   = 10001
-	ServerError        = 10101
-	TooManyRequests    = 10102
+
+	InvalidParameter = 10000
+	UserDoesNotExist = 10001
+	ServerError      = 10101
+	TooManyRequests  = 10102
 )
 
 type ErrorText struct {
