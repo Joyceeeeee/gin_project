@@ -6,12 +6,12 @@ RUN mkdir -p /app
 WORKDIR /app
 
 # 将本地的代码复制到容器内的工作目录
-COPY . .
+COPY . /app
 
 # 构建 Go 项目
 RUN go build -o cmd/youdangzhe main.go
 
-EXPOSE 9001 25
+EXPOSE 9001
 
 # 设置容器启动命令
 CMD ["cmd/youdangzhe", "server"]
